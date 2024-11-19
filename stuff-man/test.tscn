@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://cufdx6q6co62e"]
+[gd_scene load_steps=4 format=3 uid="uid://cufdx6q6co62e"]
+
+[ext_resource type="Texture2D" uid="uid://ckf1l0dj40dqy" path="res://icon.svg" id="1_5qpco"]
+[ext_resource type="Script" path="res://stuff_man.gd" id="2_ko6l7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0u723"]
+size = Vector2(128, 128)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(575, 306)
+script = ExtResource("2_ko6l7")
+
+[node name="Stuff Man" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_5qpco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_0u723")
+one_way_collision_margin = 0.0
