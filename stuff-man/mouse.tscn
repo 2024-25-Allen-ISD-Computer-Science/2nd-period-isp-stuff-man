@@ -69,6 +69,7 @@ animations = [{
 
 [node name="Mouse" type="CharacterBody2D"]
 position = Vector2(926, 390)
+scale = Vector2(2, 2)
 script = ExtResource("1_i5fsi")
 start_direction = -1
 
