@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cufdx6q6co62e"]
+[gd_scene load_steps=5 format=3 uid="uid://cufdx6q6co62e"]
 
 [ext_resource type="Texture2D" uid="uid://ckf1l0dj40dqy" path="res://icon.svg" id="1_5qpco"]
 [ext_resource type="Script" path="res://stuff_man.gd" id="2_ko6l7"]
+[ext_resource type="PackedScene" uid="uid://wwuu827nhgo6" path="res://mouse.tscn" id="3_8q5fe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0u723"]
 size = Vector2(128, 128)
@@ -32,7 +33,7 @@ position = Vector2(523, 399)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon2Da1/StaticBody2D"]
 position = Vector2(-2.99997, 0.99998)
 scale = Vector2(1.00347, 1.0175)
-polygon = PackedVector2Array(33.8824, -98.2801, 256.111, 98.2801, 114.602, 98.2801, 114.602, 0, -265.08, 0, -265.08, -196.56, -123.571, -196.56, -123.571, -98.2801)
+polygon = PackedVector2Array(33.8824, -98.2801, 256.111, 98.2801, 114.602, 98.2801, 33.8824, 98.2802, 33.8824, 0, -265.08, 0, -265.08, -196.56, -123.571, -196.56, -123.571, -98.2801)
 metadata/_edit_lock_ = true
 
 [node name="Polygon2Db1" type="Polygon2D" parent="."]
@@ -70,7 +71,7 @@ position = Vector2(523, 399)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon2Da2/StaticBody2D"]
 position = Vector2(-2.99997, 0.99998)
 scale = Vector2(1.00347, 1.0175)
-polygon = PackedVector2Array(33.8824, -98.2801, 256.111, 98.2801, 114.602, 98.2801, 114.602, 0, -265.08, 0, -265.08, -196.56, -123.571, -196.56, -123.571, -98.2801)
+polygon = PackedVector2Array(33.8824, -98.2801, 256.111, 98.2801, 114.602, 98.2801, 33.8824, 98.2802, 33.8824, 0, -265.08, 0, -265.08, -196.56, -123.571, -196.56, -123.571, -98.2801)
 metadata/_edit_lock_ = true
 
 [node name="Polygon2Da3" type="Polygon2D" parent="."]
@@ -83,7 +84,7 @@ position = Vector2(523, 399)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon2Da3/StaticBody2D"]
 position = Vector2(-2.99997, 0.99998)
 scale = Vector2(1.00347, 1.0175)
-polygon = PackedVector2Array(33.8824, -98.2801, 256.111, 98.2801, 114.602, 98.2801, 114.602, 0, -265.08, 0, -265.08, -196.56, -123.571, -196.56, -123.571, -98.2801)
+polygon = PackedVector2Array(33.8824, -98.2801, 256.111, 98.2801, 114.602, 98.2801, 33.8824, 98.28, 33.8824, 0, -265.08, 0, -265.08, -196.56, -123.571, -196.56, -123.571, -98.2801)
 metadata/_edit_lock_ = true
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
@@ -106,3 +107,5 @@ position = Vector2(523, 399)
 [node name="t-r-s" type="CollisionPolygon2D" parent="t-r-s/StaticBody2D"]
 position = Vector2(-523, -399)
 polygon = PackedVector2Array(254, 400, 974, 400, 777, 300, 669, 232, 668, 141, 547, 141, 548, 231, 490, 231, 396, 300)
+
+[node name="Mouse" parent="." instance=ExtResource("3_8q5fe")]
