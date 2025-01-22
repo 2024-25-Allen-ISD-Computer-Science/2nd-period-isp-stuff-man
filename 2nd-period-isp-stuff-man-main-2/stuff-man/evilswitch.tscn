@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnfa1mevywstj"]
+
+[ext_resource type="Script" path="res://switch.gd" id="1_0on84"]
+[ext_resource type="SpriteFrames" uid="uid://d7foiknh5x6y" path="res://evilswitch.tres" id="2_26mtw"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Switch" type="StaticBody2D" parent="."]
+script = ExtResource("1_0on84")
+
+[node name="anims" type="AnimatedSprite2D" parent="Switch"]
+texture_filter = 1
+sprite_frames = ExtResource("2_26mtw")
+animation = &"notpressed"
+
+[node name="pressedbody" type="CollisionPolygon2D" parent="Switch"]
+polygon = PackedVector2Array(-22, -13, -22, 18, -26, 19, -29, 21, -31, 23, -32, 25, -32, 32, 32, 32, 32, 25, 31, 23, 29, 21, 26, 19, 22, 18, 22, -13, -22, -13)
+disabled = true
+
+[node name="unpressedbody" type="CollisionPolygon2D" parent="Switch"]
+polygon = PackedVector2Array(-22, -31, -22, 18, -26, 19, -29, 21, -31, 23, -32, 25, -32, 32, 32, 32, 32, 25, 31, 23, 29, 21, 26, 19, 22, 18, 22, -31)
