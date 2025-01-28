@@ -4,12 +4,12 @@ extends StaticBody2D
 
 # Internal state
 var is_activated: bool = false
-
+@onready var anims: AnimatedSprite2D = $anims
+@onready var collision_polygon: CollisionPolygon2D = $unpressedbody
 # Called when the scene is ready
 func _ready():
 	# Set initial color of the switch
-	if $anims:
-		$anims.play("notpressed")
+	anims.play("notpressed")
 
 # Detect when a body enters the switch's area
 func _on_body_entered(body):
@@ -19,12 +19,8 @@ func _on_body_entered(body):
 # Activate the switch and toggle objects
 func activate_switch():
 	is_activated = true
-
-	# Change the switch's appearance
-	if $anims:
-		$anims.play("pressing")
+	anims.play("pressing")
 		
-
 	# Toggle the state of connected objects
 	for object_path in objects_to_toggle:
 		var obj = get_node(object_path)

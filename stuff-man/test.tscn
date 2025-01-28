@@ -1,94 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://cufdx6q6co62e"]
+[gd_scene load_steps=7 format=3 uid="uid://cufdx6q6co62e"]
 
 [ext_resource type="Texture2D" uid="uid://ckf1l0dj40dqy" path="res://icon.svg" id="1_5qpco"]
 [ext_resource type="Script" path="res://stuff_man.gd" id="2_ko6l7"]
 [ext_resource type="PackedScene" uid="uid://wwuu827nhgo6" path="res://mouse.tscn" id="3_8q5fe"]
 [ext_resource type="Script" path="res://switch.gd" id="4_wdh1q"]
-[ext_resource type="Texture2D" uid="uid://bieftujfvqcct" path="res://evilswitch.png" id="5_q2qcg"]
+[ext_resource type="SpriteFrames" uid="uid://d7foiknh5x6y" path="res://evilswitch.tres" id="5_1j40s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0u723"]
 size = Vector2(128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dplm1"]
-atlas = ExtResource("5_q2qcg")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1o55l"]
-atlas = ExtResource("5_q2qcg")
-region = Rect2(384, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hbnq8"]
-atlas = ExtResource("5_q2qcg")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xduga"]
-atlas = ExtResource("5_q2qcg")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3m866"]
-atlas = ExtResource("5_q2qcg")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ry56a"]
-atlas = ExtResource("5_q2qcg")
-region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_31yq6"]
-atlas = ExtResource("5_q2qcg")
-region = Rect2(256, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3s0o8"]
-atlas = ExtResource("5_q2qcg")
-region = Rect2(320, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uwrxl"]
-atlas = ExtResource("5_q2qcg")
-region = Rect2(384, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_h3udi"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dplm1")
-}],
-"loop": true,
-"name": &"notpressed",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1o55l")
-}],
-"loop": true,
-"name": &"pressed",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hbnq8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xduga")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3m866")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ry56a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_31yq6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3s0o8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uwrxl")
-}],
-"loop": true,
-"name": &"pressing",
-"speed": 12.0
-}]
 
 [node name="Node2D" type="Node2D"]
 metadata/_edit_vertical_guides_ = [3266.0]
@@ -199,7 +118,7 @@ script = ExtResource("4_wdh1q")
 
 [node name="anims" type="AnimatedSprite2D" parent="Switch"]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_h3udi")
+sprite_frames = ExtResource("5_1j40s")
 animation = &"notpressed"
 
 [node name="pressedbody" type="CollisionPolygon2D" parent="Switch"]
