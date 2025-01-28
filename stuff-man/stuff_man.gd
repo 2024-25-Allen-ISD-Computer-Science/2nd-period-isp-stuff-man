@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var gravity: float = 1600      # Gravity applied to the character
 var jump_count: int = 1
 var current_jumps: int = 0
+var jumped_on_ground: bool = false
 
 func _physics_process(delta: float):
 	# Apply gravity
@@ -23,10 +24,15 @@ func _physics_process(delta: float):
 	# Handle jumping
 	if is_on_floor():
 		current_jumps = 0
+		jumped_on_ground = false
 	if Input.is_action_pressed("ui_up") and is_on_floor():
 		velocity.y = -jump_force
+		jumped_on_ground = true
 	if Input.is_action_just_pressed("ui_up") and not is_on_floor() and jump_count > current_jumps:
-		current_jumps = current_jumps + 1
+		if jumped_on_ground == true:
+			current_jumps = current_jumps + 1
+		else:
+			jumped_on_ground = true
 		velocity.y = -jump_force
 	# Move the character
 	move_and_slide()
