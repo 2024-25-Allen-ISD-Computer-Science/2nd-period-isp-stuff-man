@@ -1,14 +1,10 @@
-[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://d7foiknh5x6y"]
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://d7foiknh5x6y"]
 
 [ext_resource type="Texture2D" uid="uid://bieftujfvqcct" path="res://evilswitch.png" id="1_y5tla"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dplm1"]
 atlas = ExtResource("1_y5tla")
 region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1o55l"]
-atlas = ExtResource("1_y5tla")
-region = Rect2(384, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hbnq8"]
 atlas = ExtResource("1_y5tla")
@@ -50,14 +46,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1o55l")
-}],
-"loop": true,
-"name": &"pressed",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_hbnq8")
 }, {
 "duration": 1.0,
@@ -78,7 +66,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uwrxl")
 }],
-"loop": true,
+"loop": false,
 "name": &"pressing",
-"speed": 12.0
+"speed": 10.0
 }]

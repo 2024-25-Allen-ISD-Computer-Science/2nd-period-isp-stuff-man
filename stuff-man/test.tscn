@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://ckf1l0dj40dqy" path="res://icon.svg" id="1_5qpco"]
 [ext_resource type="Script" path="res://stuff_man.gd" id="2_ko6l7"]
+[ext_resource type="PackedScene" uid="uid://bh3xrvem8sw12" path="res://bam.tscn" id="2_yh78i"]
 [ext_resource type="PackedScene" uid="uid://wwuu827nhgo6" path="res://mouse.tscn" id="3_8q5fe"]
-[ext_resource type="Script" path="res://switch.gd" id="4_wdh1q"]
-[ext_resource type="SpriteFrames" uid="uid://d7foiknh5x6y" path="res://evilswitch.tres" id="5_1j40s"]
+[ext_resource type="PackedScene" uid="uid://d7k3fsrmu8ft" path="res://levelswitch.tscn" id="5_m1pm7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0u723"]
 size = Vector2(128, 128)
@@ -15,8 +15,10 @@ metadata/_edit_vertical_guides_ = [3266.0]
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(775, 339)
 script = ExtResource("2_ko6l7")
+animation_scene = ExtResource("2_yh78i")
 
 [node name="Stuff Man" type="Sprite2D" parent="CharacterBody2D"]
+texture_filter = 1
 texture = ExtResource("1_5qpco")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
@@ -111,19 +113,6 @@ position = Vector2(-523, -399)
 polygon = PackedVector2Array(254, 400, 974, 400, 777, 300, 669, 232, 668, 141, 547, 141, 548, 231, 490, 231, 396, 300)
 
 [node name="Mouse" parent="." instance=ExtResource("3_8q5fe")]
+metadata/enemy = true
 
-[node name="Switch" type="StaticBody2D" parent="."]
-position = Vector2(-50, 659)
-script = ExtResource("4_wdh1q")
-
-[node name="anims" type="AnimatedSprite2D" parent="Switch"]
-texture_filter = 1
-sprite_frames = ExtResource("5_1j40s")
-animation = &"notpressed"
-
-[node name="pressedbody" type="CollisionPolygon2D" parent="Switch"]
-polygon = PackedVector2Array(-22, -13, -22, 18, -26, 19, -29, 21, -31, 23, -32, 25, -32, 32, 32, 32, 32, 25, 31, 23, 29, 21, 26, 19, 22, 18, 22, -13, -22, -13)
-disabled = true
-
-[node name="unpressedbody" type="CollisionPolygon2D" parent="Switch"]
-polygon = PackedVector2Array(-22, -31, -22, 18, -26, 19, -29, 21, -31, 23, -32, 25, -32, 32, 32, 32, 32, 25, 31, 23, 29, 21, 26, 19, 22, 18, 22, -31)
+[node name="Switch" parent="." instance=ExtResource("5_m1pm7")]
