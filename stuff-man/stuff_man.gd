@@ -40,6 +40,8 @@ func _physics_process(delta: float):
 		else:
 			jumped_on_ground = true
 		velocity.y = -jump_force
+	if is_on_wall():
+		current_jumps = 0
 	# Move the character
 	move_and_slide()
 
