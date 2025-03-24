@@ -10,133 +10,108 @@
 metadata/_edit_vertical_guides_ = [3266.0]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
-position = Vector2(769, 331)
+position = Vector2(775, 339)
 script = ExtResource("2_ko6l7")
 animation_scene = ExtResource("2_yh78i")
 
 [node name="Stuff Man" type="Sprite2D" parent="CharacterBody2D"]
 texture_filter = 1
-position = Vector2(-6, 0.0993652)
 texture = ExtResource("1_5qpco")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
-position = Vector2(-6, 0.0993652)
-polygon = PackedVector2Array(64, 63.9006, -64, 63.9006, -64, -64, 64, -64.0994)
+polygon = PackedVector2Array(64, 49.0878, 63, 53, 62, 56, 56, 62, 53, 63, 48, 64, -64, 65, -64, -64, 49, -64, 54, -63, 56, -62, 62, -56, 63, -54, 64, -50)
 one_way_collision_margin = 0.0
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(-6, 0.0993652)
 
 [node name="Polygon2Da1" type="Polygon2D" parent="."]
-position = Vector2(215, 292)
+position = Vector2(221, 300)
 polygon = PackedVector2Array(254, 200, 254, 400, 554, 400, 554, 500, 777, 500, 554, 300, 396, 300, 396, 200)
-metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Polygon2Da1"]
-position = Vector2(523, 399.099)
+position = Vector2(523, 399)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon2Da1/StaticBody2D"]
-position = Vector2(-2.99997, 0.900615)
+position = Vector2(-2.99997, 0.99998)
 scale = Vector2(1.00347, 1.0175)
 polygon = PackedVector2Array(33.8824, -98.2801, 256.111, 98.2801, 114.602, 98.2801, 33.8824, 98.2802, 33.8824, 0, -265.08, 0, -265.08, -196.56, -123.571, -196.56, -123.571, -98.2801)
 metadata/_edit_lock_ = true
 
 [node name="Polygon2Db1" type="Polygon2D" parent="."]
-position = Vector2(0, -3)
-polygon = PackedVector2Array(475, 1220, 3523, 1220, 3651, 1096, 4070, 1096, 4070, 1220, 4070, 1980, 475, 1980)
+position = Vector2(0, 5)
+polygon = PackedVector2Array(475, 1220, 4070, 1220, 4070, 1980, 475, 1980)
 metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Polygon2Db1"]
-position = Vector2(-3, 0.0993652)
+position = Vector2(3, 0)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon2Db1/StaticBody2D"]
-position = Vector2(6, -0.0993652)
-polygon = PackedVector2Array(472, 1220, 3520, 1220, 3648, 1096, 4067, 1096, 4067, 1980, 472, 1980)
+polygon = PackedVector2Array(472, 1220, 4067, 1220, 4067, 1980, 472, 1980)
 metadata/_edit_lock_ = true
 
 [node name="Polygon2Da2a1" type="Polygon2D" parent="."]
-position = Vector2(110, -208)
+position = Vector2(116, -200)
 polygon = PackedVector2Array(254, 200, 254, 400, 777, 400, 777, 300, 396, 300, 396, 200)
-metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Polygon2Da2a1"]
-position = Vector2(523, 399.099)
+position = Vector2(523, 399)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon2Da2a1/StaticBody2D"]
-position = Vector2(-2.99997, 0.90063)
+position = Vector2(-2.99997, 0.99998)
 scale = Vector2(1.00347, 1.0175)
 polygon = PackedVector2Array(256.111, -98.2801, 256.111, 0, -265.08, 0, -265.08, -196.56, -123.571, -196.56, -123.571, -98.2801)
 metadata/_edit_lock_ = true
 
 [node name="Polygon2Da2" type="Polygon2D" parent="."]
-position = Vector2(596, 592)
+position = Vector2(602, 600)
 polygon = PackedVector2Array(254, 200, 254, 400, 554, 400, 554, 500, 777, 500, 554, 300, 396, 300, 396, 200)
-metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Polygon2Da2"]
-position = Vector2(523, 399.099)
+position = Vector2(523, 399)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon2Da2/StaticBody2D"]
-position = Vector2(-2.99997, 0.900615)
+position = Vector2(-2.99997, 0.99998)
 scale = Vector2(1.00347, 1.0175)
 polygon = PackedVector2Array(33.8824, -98.2801, 256.111, 98.2801, 114.602, 98.2801, 33.8824, 98.2802, 33.8824, 0, -265.08, 0, -265.08, -196.56, -123.571, -196.56, -123.571, -98.2801)
 metadata/_edit_lock_ = true
 
 [node name="Polygon2Da3" type="Polygon2D" parent="."]
-position = Vector2(977, 892)
+position = Vector2(983, 900)
 polygon = PackedVector2Array(254, 200, 254, 400, 554, 400, 554, 500, 777, 500, 554, 300, 396, 300, 396, 200)
-metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Polygon2Da3"]
-position = Vector2(523, 399.099)
+position = Vector2(523, 399)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon2Da3/StaticBody2D"]
-position = Vector2(-2.99997, 0.900615)
+position = Vector2(-2.99997, 0.99998)
 scale = Vector2(1.00347, 1.0175)
 polygon = PackedVector2Array(33.8824, -98.2801, 256.111, 98.2801, 114.602, 98.2801, 33.8824, 98.28, 33.8824, 0, -265.08, 0, -265.08, -196.56, -123.571, -196.56, -123.571, -98.2801)
 metadata/_edit_lock_ = true
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2(-1172, 302)
+position = Vector2(-1166, 310)
 polygon = PackedVector2Array(1162, 381, 1004, 381, 1096, 581, 2147, 1281)
-metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Polygon2D"]
-position = Vector2(0, 0.0993652)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon2D/StaticBody2D"]
-position = Vector2(0, -0.0993652)
-polygon = PackedVector2Array(1004, 381, 1096, 581, 2147, 1281, 1162, 381)
-
-[node name="t-r-s" type="Polygon2D" parent="."]
-position = Vector2(1933, 817)
-polygon = PackedVector2Array(254, 400, 974, 400, 777, 300, 669, 232, 668, 141, 547, 141, 548, 231, 490, 231, 396, 300)
+polygon = PackedVector2Array(1004, 381, 1096, 581, 2147, 1281, 1163, 381)
 metadata/_edit_lock_ = true
 
+[node name="t-r-s" type="Polygon2D" parent="."]
+position = Vector2(1939, 825)
+polygon = PackedVector2Array(254, 400, 974, 400, 777, 300, 669, 232, 668, 141, 547, 141, 548, 231, 490, 231, 396, 300)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="t-r-s"]
-position = Vector2(523, 399.099)
+position = Vector2(523, 399)
 
 [node name="t-r-s" type="CollisionPolygon2D" parent="t-r-s/StaticBody2D"]
 position = Vector2(-523, -399)
 polygon = PackedVector2Array(254, 400, 974, 400, 777, 300, 669, 232, 668, 141, 547, 141, 548, 231, 490, 231, 396, 300)
-metadata/_edit_lock_ = true
-
-[node name="Polygon2D2" type="Polygon2D" parent="."]
-position = Vector2(-2493, -1420)
-scale = Vector2(1.56833, 2.26244)
-polygon = PackedVector2Array(4451.87, 1113, 4451.87, 1886.01, 1950.48, 1886.01, 729.438, 1024.11, 584.698, 1102.35, 1950.48, 1996.96, 4913.51, 1996.96, 4912.87, 1113)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Polygon2D2"]
-position = Vector2(-3.82573, 0.0439194)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon2D2/StaticBody2D"]
-position = Vector2(3.82573, -0.0439084)
-polygon = PackedVector2Array(4451.87, 1113.01, 4451.87, 1886.01, 1950.48, 1886.01, 730.076, 1023.67, 584.698, 1102.35, 1950.48, 1996.96, 4913.51, 1996.96, 4912.87, 1113.01)
-metadata/_edit_lock_ = true
 
 [node name="Mouse" parent="." instance=ExtResource("3_8q5fe")]
-position = Vector2(920, 382.099)
+bounciness = 500.0
+max_hp = 40
 metadata/enemy = true
 
 [node name="Switch" parent="." instance=ExtResource("5_m1pm7")]
-position = Vector2(-84, 619.099)

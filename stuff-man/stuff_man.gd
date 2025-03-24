@@ -5,9 +5,16 @@ extends CharacterBody2D
 @export var jump_force: float = 800   # Jump strength
 @export var gravity: float = 1600      # Gravity applied to the character
 @export var animation_scene: PackedScene  # Assign your animation scene in the inspector
+@export var max_hp: int = 3
+@export var invincibility_time: float = 1.0  # Time (in seconds) player is invincible after taking damage
 var jump_count: int = 1
 var current_jumps: int = 0
 var jumped_on_ground: bool = false
+var current_hp: int
+var is_invincible: bool = false
+
+func _ready():
+	current_hp = max_hp
 
 func _physics_process(delta: float):
 	# Apply gravity
@@ -25,8 +32,11 @@ func _physics_process(delta: float):
 		var collision = get_slide_collision(index)
 		var collider = collision.get_collider()
 
-		if collider.has_meta("enemy"):  # Replace 'Enemy' with your enemy class
-			play_hit_animation(collision.get_position())
+		if collider != null:
+			if collider.has_method("take_damage") && collider.is_invincible == false:  # Replace 'Enemy' with your enemy class
+				play_hit_animation(collision.get_position())
+				collider.take_damage(1)
+				velocity.y -= collider.bounciness
 	# Handle jumping
 	if is_on_floor():
 		current_jumps = 0
@@ -40,11 +50,9 @@ func _physics_process(delta: float):
 		else:
 			jumped_on_ground = true
 		velocity.y = -jump_force
-	if is_on_wall():
-		current_jumps = 0
 	# Move the character
 	move_and_slide()
-
+		
 func play_hit_animation(position: Vector2):
 	if animation_scene:
 		var animation_instance = animation_scene.instantiate()
