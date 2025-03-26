@@ -115,3 +115,16 @@ max_hp = 40
 metadata/enemy = true
 
 [node name="Switch" parent="." instance=ExtResource("5_m1pm7")]
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2(-2469, -1297)
+scale = Vector2(1.56833, 2.26244)
+polygon = PackedVector2Array(4451.87, 1113, 4451.87, 1886.01, 1950.48, 1886.01, 729.438, 1024.11, 584.698, 1102.35, 1950.48, 1996.96, 4913.51, 1996.96, 4912.87, 1113)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Polygon2D2"]
+position = Vector2(-3.82573, 0.0439194)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon2D2/StaticBody2D"]
+position = Vector2(3.82573, -0.0439084)
+polygon = PackedVector2Array(4451.87, 1113.01, 4451.87, 1886.01, 1950.48, 1886.01, 730.076, 1023.67, 584.698, 1102.35, 1950.48, 1996.96, 4913.51, 1996.96, 4912.87, 1113.01)
+metadata/_edit_lock_ = true
