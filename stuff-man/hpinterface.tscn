@@ -236,5 +236,14 @@ offset_bottom = 23.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(50, 50)
 sprite_frames = SubResource("SpriteFrames_e5yt3")
-animation = &"emptyheart"
+animation = &"damage"
+frame = 12
+frame_progress = 1.0
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+z_index = -1
+position = Vector2(139, 35)
+color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+polygon = PackedVector2Array(1012, -33, 1011, 61, -139, 58, -139, -35)

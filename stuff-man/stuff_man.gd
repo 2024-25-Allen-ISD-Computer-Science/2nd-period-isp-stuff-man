@@ -7,6 +7,8 @@ extends CharacterBody2D
 @export var animation_scene: PackedScene  # Assign your animation scene in the inspector
 @export var max_hp: int = 3
 @export var invincibility_time: float = 1.0  # Time (in seconds) player is invincible after taking damage
+@export var ui_scene: PackedScene = preload("res://hpinterface.tscn")
+var ui_instance: Node = null
 var jump_count: int = 1
 var current_jumps: int = 0
 var jumped_on_ground: bool = false
