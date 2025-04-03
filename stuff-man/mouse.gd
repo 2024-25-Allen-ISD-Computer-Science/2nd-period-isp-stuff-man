@@ -16,7 +16,7 @@ var direction: int
 var is_invincible: bool = false
 # References to the child nodes
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var collision_polygon: CollisionPolygon2D = $CollisionPolygon2D
+@onready var collision_polygon: CollisionPolygon2D = $CollisionShape2D
 
 func _ready():
 	# Set the starting direction

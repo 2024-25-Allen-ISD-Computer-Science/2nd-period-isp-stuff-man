@@ -39,6 +39,9 @@ func _physics_process(delta: float):
 				play_hit_animation(collision.get_position())
 				collider.take_damage(1)
 				velocity.y -= collider.bounciness
+			elif collider.has_method("get_cash"):
+				collider.get_cash()
+				print("You have $" + str(Globalvars.money))
 	# Handle jumping
 	if is_on_floor():
 		current_jumps = 0

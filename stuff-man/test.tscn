@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://cufdx6q6co62e"]
+[gd_scene load_steps=11 format=3 uid="uid://cufdx6q6co62e"]
 
 [ext_resource type="Texture2D" uid="uid://ckf1l0dj40dqy" path="res://icon.svg" id="1_5qpco"]
 [ext_resource type="Script" path="res://stuff_man.gd" id="2_ko6l7"]
 [ext_resource type="PackedScene" uid="uid://bh3xrvem8sw12" path="res://bam.tscn" id="2_yh78i"]
 [ext_resource type="PackedScene" uid="uid://wwuu827nhgo6" path="res://mouse.tscn" id="3_8q5fe"]
 [ext_resource type="PackedScene" uid="uid://d7k3fsrmu8ft" path="res://levelswitch.tscn" id="5_m1pm7"]
+[ext_resource type="PackedScene" uid="uid://bi1wiqh1gws7n" path="res://penny.tscn" id="6_5xcis"]
+[ext_resource type="PackedScene" uid="uid://b647rafdwupgx" path="res://nickel.tscn" id="7_au4tv"]
+[ext_resource type="PackedScene" uid="uid://dnp7et4yrpgom" path="res://dollar.tscn" id="8_py3a7"]
+[ext_resource type="PackedScene" uid="uid://m8mytrphtcee" path="res://quarter.tscn" id="9_kohw7"]
+[ext_resource type="PackedScene" uid="uid://24a1f6j3yd53" path="res://dime.tscn" id="10_l716d"]
 
 [node name="Node2D" type="Node2D"]
 metadata/_edit_vertical_guides_ = [3266.0]
@@ -130,3 +135,24 @@ position = Vector2(-3.82573, 0.0439194)
 position = Vector2(3.82573, -0.0439084)
 polygon = PackedVector2Array(4451.87, 1113.01, 4451.87, 1886.01, 1950.48, 1886.01, 730.076, 1023.67, 584.698, 1102.35, 1950.48, 1996.96, 4913.51, 1996.96, 4912.87, 1113.01)
 metadata/_edit_lock_ = true
+
+[node name="penny" parent="." instance=ExtResource("6_5xcis")]
+position = Vector2(1351, 806)
+
+[node name="nickel2" parent="." instance=ExtResource("7_au4tv")]
+position = Vector2(748, 6)
+
+[node name="nickel" parent="." instance=ExtResource("7_au4tv")]
+position = Vector2(607, 5)
+
+[node name="dollar" parent="." instance=ExtResource("8_py3a7")]
+position = Vector2(-1304, 906)
+
+[node name="quarter2" parent="." instance=ExtResource("9_kohw7")]
+position = Vector2(4283, 1923)
+
+[node name="quarter" parent="." instance=ExtResource("9_kohw7")]
+position = Vector2(1129, 1158)
+
+[node name="dime" parent="." instance=ExtResource("10_l716d")]
+position = Vector2(-99, 521)
