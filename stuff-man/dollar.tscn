@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnp7et4yrpgom"]
+
+[ext_resource type="Script" path="res://money.gd" id="1_hvsro"]
+[ext_resource type="Texture2D" uid="uid://bn5ik4lqju1qq" path="res://money.png" id="2_04a6t"]
+
+[node name="dollar" type="Node2D"]
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+script = ExtResource("1_hvsro")
+value = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture_filter = 1
+texture = ExtResource("2_04a6t")
+hframes = 5
+frame = 4
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(50, -30, 50, 30, -50, 30, -50, -30)
