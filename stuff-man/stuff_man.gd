@@ -7,6 +7,7 @@ extends CharacterBody2D
 @export var animation_scene: PackedScene  # Assign your animation scene in the inspector
 @export var max_hp: int = 3
 @export var invincibility_time: float = 1.0  # Time (in seconds) player is invincible after taking damage
+@export var anims: AnimatedSprite2D
 @export var ui_scene: PackedScene = preload("res://hpinterface.tscn")
 var ui_instance: Node = null
 var jump_count: int = 1
@@ -17,6 +18,7 @@ var is_invincible: bool = false
 
 func _ready():
 	current_hp = max_hp
+	anims.play("wait")
 
 func _physics_process(delta: float):
 	# Apply gravity
@@ -30,6 +32,10 @@ func _physics_process(delta: float):
 	if Input.is_action_pressed("ui_right"):
 		input_direction += 1
 	velocity.x = input_direction * speed
+	if velocity.x != 0 and is_on_floor():
+		anims.play("walk")
+	elif velocity.x == 0 and is_on_floor():
+		anims.play("wait")
 	for index in get_slide_collision_count():
 		var collision = get_slide_collision(index)
 		var collider = collision.get_collider()
